@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  host: localhost
+
+development:
+  <<: *default
+  database: rindastar_development
+
+test:
+  <<: *default
+  database: rindastar_test
+
+production:
+  <<: *default
+  database: rindastar_production
+  username: rindastar
+  password: <%= ENV["RINDASTAR_DATABASE_PASSWORD"] %>
