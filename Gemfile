@@ -41,7 +41,7 @@ gem 'rubocop', '~> 1.66', require: false
 # Rswag is a gem for integrating Swagger documentation with RSpec tests in Rails applications.
 # It allows you to automatically generate and update API documentation based on your tests,
 # ensuring that your API documentation stays in sync with your code and providing a live, interactive API explorer.
-gem 'rswag', '~> 2.13'
+gem 'rswag', '~> 2.13', require: false
 
 group :development, :test do
   gem 'debug', platforms: %i[mri windows]
