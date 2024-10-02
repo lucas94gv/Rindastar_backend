@@ -26,7 +26,7 @@ gem 'puma', '>= 5.0'
 # gem "bcrypt", "~> 3.1.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: %i[windows jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
@@ -44,7 +44,7 @@ gem 'rubocop', '~> 1.66', require: false
 gem 'rswag', '~> 2.13', require: false
 
 group :development, :test do
-  gem 'debug', platforms: %i[mri windows]
+  gem 'debug', platforms: %i[mri mingw mswin x64_mingw]
   # Dotenv-Rails is a gem that loads environment variables from a `.env` file into the Rails application.
   # This is useful for managing configuration settings, API keys, and secrets in development and
   # test environments, keeping them out of version control and facilitating easier configuration management.

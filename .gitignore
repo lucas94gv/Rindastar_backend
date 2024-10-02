@@ -32,3 +32,9 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+misc.xml
+modules.xml
+Rindastar.iml
+vcs.xml
+.gitignore
