@@ -11,8 +11,13 @@ development:
   database: rindastar_development
 
 test:
-  <<: *default
-  database: rindastar_test
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  database: <%= ENV['PG_DATABASE'] || 'postgres' %>
+  username: <%= ENV['DATABASE_USERNAME'] || 'postgres' %>
+  password: <%= ENV['DATABASE_PASSWORD'] || 'postgres' %>
+  host: <%= ENV['PG_HOST'] || '127.0.0.1' %>
 
 production:
   <<: *default
